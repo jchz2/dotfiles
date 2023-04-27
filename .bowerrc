@@ -1,0 +1,11 @@
+{
+  "registry": {
+        "search": [
+            "https://juancarlos.hernandez.zamora.contractor:AKCp8nzg6AqgxcwESkKX97gDn4tP3tjw1SVQe4qDVe9jj4mvBsHnopL88giKqHUtpgGo6JNti@artifactory.globaldevtools.bbva.com:443/artifactory/api/bower/gl-cells-bower-virtual"
+        ]
+    },
+     "resolvers": [
+          "bower-art-resolver"
+    ],
+    "timeout":13000
+}

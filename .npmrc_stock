@@ -1,0 +1,3 @@
+registry=https://globaldevtools.bbva.com/artifactory/api/npm/npm-virtual
+always-auth=true
+//globaldevtools.bbva.com/artifactory/api/npm/:_auth="anVhbmNhcmxvcy5oZXJuYW5kZXouemFtb3JhLmNvbnRyYWN0b3I6QUtDcDhqUlJuZmlCUGJHTHNIRWRIN3VFeUZvb0dwQ1pwUVFIZ1YyYWRMQXlwMXhZYnh0RFJxd2tDTkpndVA4bTJ6UXh2ZTVSQw=="

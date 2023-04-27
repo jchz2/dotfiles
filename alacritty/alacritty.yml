@@ -1,44 +1,55 @@
+#  █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
+# ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
+# ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝
+# ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝
+# ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
+# A cross-platform, OpenGL terminal emulator.
+# https://alacritty.org
+
 live_config_reload: true
 
-window:
-  opacity: .94 
-  padding:
-    x: 12
-    y: 12
-  dynamic_padding: false
-  decorations: buttonless
+env:
+  TERM: xterm-256color
 
 font:
   normal:
-    family: "SFMono Nerd Font"
-    style: Regular
-  size: 15.0
-  use_thin_strokes: true
+    family: "Source Code Pro"
+    style: Italic
+  size: 16.0
+
+window:
+  opacity: 0.95
+  padding:
+    x: 5
+    y: 5
+  dynamic_padding: false
+  decorations: buttonless
 colors:
   # Default colors
   primary:
-    background: '#282a36'
-    foreground: '#eff0eb'
+    background: '#2E3440'
+    foreground: '#D8DEE9'
 
   # Normal colors
   normal:
-    black: '#282a36'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
+    black: '#3B4252'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#88C0D0'
+    white: '#E5E9F0'
 
   # Bright colors
   bright:
-    black: '#686868'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-theme: Snazzy
+    black: '#4C566A'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#8FBCBB'
+    white: '#ECEFF4'
+theme: Nord
