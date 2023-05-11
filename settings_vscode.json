@@ -1,0 +1,33 @@
+{
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": false,
+  "editor.matchBrackets": "never",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.guides.indentation": false,
+  "indenticator.width": 0.1,
+  "indenticator.color.dark": "rgba(93,129,171,0.6)",
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  //"editor.lineNumbers": "relative",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Source Code Pro",
+  "editor.fontVariations": true,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": 640,
+  "workbench.colorCustomizations": {
+    "editorLineNumber.foreground": "#999999",
+    "editorLineNumber.activeForeground": "#EBCB8B"
+  },
+  "workbench.colorTheme": "Nord Frost",
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {}
+}
