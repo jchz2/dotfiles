@@ -7,14 +7,20 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jk", "<ESC>")
 
 keymap.set("n", "<ESC>", ":nohl<CR>")
-keymap.set("n", "<leader>w", ":w!<CR>")
-keymap.set("n", "<leader>a", ":wall!<CR>")
+keymap.set("n", "<leader>w", ":w<CR>")
+keymap.set("n", "<leader>a", ":wall<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "-", "dd", { noremap = true }) -- Delete a word backwards
 keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>br", ":%s/", { noremap = true }) -- buscar y remplazar
 keymap.set("v", "<leader>a", ":!sort<CR>", { noremap = true }) -- orden alfabetico
 keymap.set("n", "<leader>bt", ":TransparentToggle<CR>") -- Background trasparent
+keymap.set("n", "<leader>p", ":Prettier<CR>") -- Format Prettier
+keymap.set("n", "bn", ":bNext<CR>") -- Buffer next
+keymap.set("n", "bp", ":bprevious<CR>") -- Buffer previous
+keymap.set("n", "bd", ":bdelete<CR>") -- Buffer close
+keymap.set("n", "gd", ":DiffviewOpen<CR>") -- Git Diffview 
+keymap.set("n", "<leader>x", ":!node %<cr>")
 
 -- Move text up and down
 keymap.set("x", "J", ":move '>+1<CR>gv-gv")
@@ -46,7 +52,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
 -- plugin keymaps
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -63,3 +69,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- rest
+keymap.set("n", "<leader>rr", ":lua require('rest-nvim').run()<CR>", { noremap = true })

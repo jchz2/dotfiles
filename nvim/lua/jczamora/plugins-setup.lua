@@ -92,6 +92,7 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("MunifTanjim/prettier.nvim") -- prettier
 
 	-- treesitter configuration
 	use({
@@ -114,6 +115,28 @@ return packer.startup(function(use)
 	use("xiyaowong/transparent.nvim") -- Background transparent
 
 	use("f-person/git-blame.nvim") -- Gitlens
+
+  use("sindrets/diffview.nvim") --gitDiff
+
+  --liveServer
+  use({
+  "aurum77/live-server.nvim",
+    run = function()
+      require"live_server.util".install()
+    end,
+    cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+  })
+
+	use {
+      "rest-nvim/rest.nvim",
+      requires = { "nvim-lua/plenary.nvim"},
+  } -- Rest nvim
+
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} --bufferline
+
+  use('norcalli/nvim-colorizer.lua') --colorizer
+
+  use('uga-rosa/ccc.nvim') --ColorsRGBSelector
 
 	if packer_bootstrap then
 		require("packer").sync()
