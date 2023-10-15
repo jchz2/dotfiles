@@ -1,41 +1,88 @@
-#
-#  █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
-# ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
-# ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝
-# ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝
-# ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║
-# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
-# A cross-platform, OpenGL terminal emulator.
-# https://alacritty.org
-
-live_config_reload: true
-
-env:
-  TERM: xterm-256color
-
+# Window Customization
 window:
-  decorations: buttonless
-  dynamic_padding: false
-  opacity: 0.70
+  opacity: .70
+  dimensions:
+    columns: 140
+    lines: 38
   padding:
-    x: 8
+    x: 10
     y: 4
+  decorations: full #full #Still won't show in a window manger, but will in a desktop environment decorations: buttonless
+scrolling:
+  history: 10000
+  multiplier: 3
+window.dynamic_title: true
 
+# Font Customization
 font:
   normal:
-    family: "Iosevka Nerd Font"
-    style: Italic
-  italic:
-    family: "Iosevka Nerd Font"
+    family: Iosevka Nerd Font
     style: Italic
   bold:
-    family: "Iosevka Nerd Font"
+    family: Iosevka Nerd Font
     style: Italic
-  bold_italic:
-    family: "Iosevka Nerd Font"
+  italic:
+    family: Iosevka Nerd Font
     style: Italic
-  size: 10
+  size: 12
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
 
+colors:
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  # Hepburn
+  primary:
+    background: "0x080808"
+    foreground: "0xfbf1c7"
+  normal:
+    black: "0x282828"
+    red: "0xcc241d"
+    green: "0x98971a"
+    yellow: "0xd79921"
+    blue: "0x458588"
+    magenta: "0xb16286"
+    cyan: "0x689d6a"
+    white: "0xa89984"
+  bright:
+    black: "0x928374"
+    red: "0xfb4934"
+    green: "0xb8bb26"
+    yellow: "0xfabd2f"
+    blue: "0x83a598"
+    magenta: "0xd3869b"
+    cyan: "0x8ec07c"
+    white: "0xebdbb2"
+
+  indexed_colors:
+    - { index: 16, color: "0xdc9656" }
+    - { index: 17, color: "0xa16946" }
+    - { index: 18, color: "0x282828" }
+    - { index: 19, color: "0x383838" }
+    - { index: 20, color: "0xb8b8b8" }
+    - { index: 21, color: "0xe8e8e8" }
+
+  selection:
+    text: "0xffffff"
+    background: "0xdc3232"
+    white: "0xffffff"
+
+cursor:
+  style:
+    shape: Beam
+    blinking: off
+    blink-interval: 750
+    unfocused_hollow: true
+# key_bindings:
+#   - { key: N, mods: Control, action: SpawnNewInstance }
 key_bindings:
   - { key: C, mods: Command|Shift, chars: "\x02 " }
   # enter thumb mode
@@ -114,33 +161,3 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" }
   #                ... 8
   - { key: Key9, mods: Command, chars: "\x029" }
-  #                ... 9
-
-colors:
-  name: Orangish
-  author: ""
-  primary:
-    background: "#000000"
-    foreground: "#ffffff"
-  cursor:
-    text: "#000000"
-    cursor: "#ffffff"
-  normal:
-    black: "#251f1f"
-    red: "#eb4509"
-    green: "#94e76b"
-    yellow: "#ffac18"
-    blue: "#46aede"
-    magenta: "#e32c57"
-    cyan: "#d6dbac"
-    white: "#efefef"
-  bright:
-    black: "#5e5e5e"
-    red: "#eb4509"
-    green: "#95e76b"
-    yellow: "#ffac18"
-    blue: "#46aede"
-    magenta: "#e32c57"
-    cyan: "#d6dbac"
-    white: "#efefef"
-theme: Orangish

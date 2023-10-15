@@ -1,21 +1,4 @@
-require("jczamora.plugins-setup")
-require("jczamora.core.options")
-require("jczamora.core.keymaps")
-require("jczamora.core.colorscheme")
-require("jczamora.plugins.comment")
-require("jczamora.plugins.nvim-tree")
-require("jczamora.plugins.lualine")
-require("jczamora.plugins.telescope")
-require("jczamora.plugins.nvim-cmp")
-require("jczamora.plugins.lsp.mason")
-require("jczamora.plugins.lsp.lspsaga")
-require("jczamora.plugins.lsp.lspconfig")
-require("jczamora.plugins.lsp.null-ls")
-require("jczamora.plugins.autopairs")
-require("jczamora.plugins.treesitter")
-require("jczamora.plugins.gitsigns")
-require("jczamora.plugins.bufferline")
-require("jczamora.plugins.rest")
-require("jczamora.plugins.live-server")
-require("jczamora.plugins.colorizer")
-require("jczamora.plugins.cccpick")
+require "config.keymaps"
+require "config.options"
+require "config.lazy"
+require "config.plugins"
