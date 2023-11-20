@@ -8,12 +8,13 @@ return {
     -- recommended settings from nvim-tree documentation
     vim.g.loaded = 1
     vim.g.loaded_netrwPlugin = 1
+    vim.g.tree_quin_on_open = 1
 
     vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
     nvimtree.setup({
       view = {
-        width = 32,
+        width = 30,
         side = "right",
       },
       renderer = {

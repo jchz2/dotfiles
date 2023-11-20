@@ -12,6 +12,7 @@ opt.expandtab = true
 opt.autoindent = true
 opt.softtabstop = 2
 opt.smartindent = true
+opt.list = true
 
 -- line wrappping
 opt.wrap = false

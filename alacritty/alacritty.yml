@@ -1,47 +1,165 @@
-#
-#  █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
-# ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
-# ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝
-# ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝
-# ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║
-# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
-# A cross-platform, OpenGL terminal emulator.
-# https://alacritty.org
-
 live_config_reload: true
 
-env:
-  TERM: xterm-256color
-
 window:
-  decorations: buttonless
-  dynamic_padding: false
-  opacity: 0.70
+  opacity: 1
   padding:
     x: 8
-    y: 4
+    y: 0
+  dynamic_padding: false
+  decorations: full  #buttonless, full or none
 
 font:
+  size: 12.0
   normal:
-    family: "Iosevka Nerd Font"
+    family: PlemolJP35 Console NF
     style: Italic
-  italic:
-    family: "Iosevka Nerd Font"
-    style: Italic
-  bold:
-    family: "Iosevka Nerd Font"
-    style: Italic
-  bold_italic:
-    family: "Iosevka Nerd Font"
-    style: Italic
-  size: 10
 
+#######################################
+##      START OF COLOR SCHEMES       ##
+#######################################
+schemes:
+  ### Gruvbox dark ###
+  gruvbox-dark: &gruvbox-dark
+    # Default colors
+    primary:
+      # hard contrast: background = '0x1d2021'
+      background: '#1b1b1b'
+      # soft contrast: background = '0x32302f'
+      foreground: '#ebdbb2'
+
+    # Normal colors
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
+
+  ### Monokai ###
+  monokai-pro: &monokai-pro
+    # Default colors
+    primary:
+      background: '#2D2A2E'
+      foreground: '#FCFCFA'
+
+    # Normal colors
+    normal:
+      black:   '#403E41'
+      red:     '#FF6188'
+      green:   '#A9DC76'
+      yellow:  '#FFD866'
+      blue:    '#FC9867'
+      magenta: '#AB9DF2'
+      cyan:    '#78DCE8'
+      white:   '#FCFCFA'
+
+    # Bright colors
+    bright:
+      black:   '#727072'
+      red:     '#FF6188'
+      green:   '#A9DC76'
+      yellow:  '#FFD866'
+      blue:    '#FC9867'
+      magenta: '#AB9DF2'
+      cyan:    '#78DCE8'
+      white:   '#FCFCFA'
+
+  ### Nord ###
+  nord: &nord
+    # Default colors
+    primary:
+      background: '#2E3440'
+      foreground: '#D8DEE9'
+
+    # Normal colors
+    normal:
+      black:   '#3B4252'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#88C0D0'
+      white:   '#E5E9F0'
+
+    # Bright colors
+    bright:
+      black:   '#4C566A'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#8FBCBB'
+      white:   '#ECEFF4'
+
+  ### nordic ###
+  nordic: &nordic
+     # Default colors
+    primary:
+      background: '#242933'
+      foreground: '#BBBDAF'
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '#000000'
+      cursor: '#F0DFAF'
+
+    # Normal colors
+    normal:
+      black: '#191C1D'
+      red: '#BD6062'
+      green: '#A3D6A9'
+      yellow: '#F0DFAF'
+      blue: '#8FB4D8'
+      magenta: '#C7A9D9'
+      cyan: '#B6D7A8'
+
+    # Bright colors
+    bright:
+      black: '#727C7C'
+      red: '#D18FAF'
+      green: '#B7CEB0'
+      yellow: '#BCBCBC'
+      blue: '#E0CF9F'
+      magenta: '#C7A9D9'
+      cyan: '#BBDA97'
+      white: '#BDC5BD'
+######################################################################
+## SET THEME: Choose ONE color scheme from those in the above list. ##
+## ###################################################################
+# Available themes are:
+# *dracula
+# *gruvbox-dark
+# *monokai-pro
+# *nord
+# *nordic
+
+colors: *nordic
+
+#######################################
+##       END OF COLOR SCHEMES        ##
+#######################################
 key_bindings:
   - { key: C, mods: Command|Shift, chars: "\x02 " }
   # enter thumb mode
-  - { key: E, mods: Command, chars: "\x02\"" }
+  - { key: S, mods: Command, chars: "\x02\"" }
   # split tmux window vertically
-  - { key: E, mods: Command|Shift, chars: "\x02%" }
+  - { key: S, mods: Command|Shift, chars: "\x02%" }
   # split tmux window horizontally
   - { key: F, mods: Command, chars: ":Grep\n" }
   # open file manager 'gokcehan/lf'
@@ -75,7 +193,7 @@ key_bindings:
   # paste last tmux buffer
   - { key: T, mods: Command|Shift, chars: "\x02P" }
   #                ... Toggle Pomodoro
-  - { key: W, mods: Command, chars: "\x02x" }
+  - { key: X, mods: Command, chars: "\x02x" }
   # kill the current pane
   - { key: Z, mods: Command, chars: "\x02z" }
   # toggle zoom state of the current tmux pane
@@ -114,33 +232,3 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" }
   #                ... 8
   - { key: Key9, mods: Command, chars: "\x029" }
-  #                ... 9
-
-colors:
-  name: Orangish
-  author: ""
-  primary:
-    background: "#000000"
-    foreground: "#ffffff"
-  cursor:
-    text: "#000000"
-    cursor: "#ffffff"
-  normal:
-    black: "#251f1f"
-    red: "#eb4509"
-    green: "#94e76b"
-    yellow: "#ffac18"
-    blue: "#46aede"
-    magenta: "#e32c57"
-    cyan: "#d6dbac"
-    white: "#efefef"
-  bright:
-    black: "#5e5e5e"
-    red: "#eb4509"
-    green: "#95e76b"
-    yellow: "#ffac18"
-    blue: "#46aede"
-    magenta: "#e32c57"
-    cyan: "#d6dbac"
-    white: "#efefef"
-theme: Orangish
