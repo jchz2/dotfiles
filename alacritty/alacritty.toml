@@ -1,0 +1,38 @@
+import = ["~/.config/alacritty/theme/nordic.toml"]
+shell = "/bin/zsh"
+
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+TERM = "xterm-256color"
+
+[window]
+  option_as_alt = "OnlyRight"
+  opacity = 0.85
+  blur = true
+  # padding = { y = 26 }
+  dynamic_padding = true
+  decorations = "None"
+  dynamic_title = true
+  class = { instance="Alacritty", general="Alacritty" }
+  resize_increments = true
+
+[font]
+  normal = { family = "PlemolJP35 Console NF", style = "Italic" }
+  size = 13
+
+[cursor]
+  style = { shape = "Beam", blinking = "Always" }
+  blink_interval=450
+
+[mouse]
+  hide_when_typing = true
+
+[selection]
+  save_to_clipboard=true
+
+[keyboard]
+bindings = [
+{ key = "Z", mods = "Command", action = "ToggleSimpleFullscreen" },
+# { key = "S", mods = "Command", chars = 'l' }
+]

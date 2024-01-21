@@ -21,6 +21,7 @@ keymap.set("n", "bp", ":bprevious<CR>") -- Buffer previous
 keymap.set("n", "bd", ":bdelete<CR>") -- Buffer close
 keymap.set("n", "gd", ":DiffviewOpen<CR>") -- Git Diffview
 keymap.set("n", "<leader>x", ":!node %<cr>")
+keymap.set("n", "<leader>j", ":ToggleTerm<CR>") -- Terminal
 
 -- Move text up and down
 keymap.set("x", "J", ":move '>+1<CR>gv-gv")

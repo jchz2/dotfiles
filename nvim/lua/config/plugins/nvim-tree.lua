@@ -39,7 +39,7 @@ return {
     --set keymaps
     local keymap = vim.keymap --for conciseness
 
-    keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>")
+    keymap.set("n", "<C-n>", ":NvimTreeFindFileToggle<CR>")
   end
 }
 

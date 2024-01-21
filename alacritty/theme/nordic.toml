@@ -1,0 +1,9 @@
+[colors]
+  primary = { foreground = "#BBBDAF", background = "#242933", dim_foreground = "#a5abb6" }
+  cursor = { text = "#000000", cursor = "#F0DFAF" }
+  vi_mode_cursor = { text = "#2e3440", cursor = "#d8dee9" }
+  selection = { text = "CellForeground", background = "#4c566a" }
+  search = { matches = { foreground = "CellBackground", background = "#88c0d0" }, focused_match = { background = "#434c5e", foreground = "#d8dee9" } }
+  footer_bar={ background= '#242933', foreground= '#BBBDAF' }
+  normal = { black = "#191C1D", red = "#BD6062", green = "#A3D6A9", yellow = "#F0DFAF", blue = "#8FB4D8", magenta = "#C7A9D9", cyan = "#B6D7A8" }
+  bright = { black = "#727C7C", red = "#D18FAF", green = "#B7CEB0", yellow = "#BCBCBC", blue = "#5E81AC", magenta = "#C7A9D9", cyan = "#BBDA97", white = "#BDC5BD" }
