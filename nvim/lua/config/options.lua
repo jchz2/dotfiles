@@ -1,75 +1,43 @@
 local opt = vim.opt -- for conciseness
 
 -- line numbers
-opt.relativenumber = true
-opt.number = true
-opt.numberwidth = 1
+-- opt.relativenumber = true -- show relative line numbers
+opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
--- tabs & identation
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
-opt.autoindent = true
-opt.softtabstop = 2
-opt.smartindent = true
-opt.list = true
+-- tabs & indentation
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.expandtab = true -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
 
--- line wrappping
-opt.wrap = false
+-- line wrapping
+opt.wrap = false -- disable line wrapping
 
--- highlight matching parenthesis
-opt.showmatch = true
-
--- serach settings
-opt.ignorecase = true
-opt.smartcase = true
-
--- Live replacing using %s/text/newText
-vim.opt.inccommand = "split"
-opt.mouse = "a"
+-- search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
-opt.cursorline = true
+opt.cursorline = true -- highlight the current cursor line
 
--- appearence
+-- appearance
+
+-- turn on termguicolors for nightfly colorscheme to work
+-- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-opt.hidden = true
-opt.pumblend = 5
-opt.winblend = 0
-opt.wildoptions = 'pum'
--- opt.colorcolumn = "80"
+opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
-opt.backspace = "indent,eol,start"
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus")
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows
-opt.splitright = true
-opt.splitbelow = true
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-")
-opt.backup = false
-opt.errorbells = false
+-- turn off swapfile
 opt.swapfile = false
-
-opt.undofile = true
-opt.hlsearch = true
-opt.incsearch = true
-opt.scrolloff = 4
-opt.sidescrolloff = 4
-opt.showmode = false
-opt.autowrite = true
-opt.encoding = "utf-8"
-vim.scriptencoding = 'utf-8'
-opt.encoding = 'utf-8'
-opt.fileencoding = 'utf-8'
-opt.list = true
-opt.cmdheight = 1
-opt.updatetime = 50
-opt.title = true
-
 

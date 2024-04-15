@@ -3,7 +3,7 @@ return
     'akinsho/toggleterm.nvim',
     version = "*",
     opts = {
-      size = 16,
+      size = 14,
       -- open_mapping = [[<leader>t]],
       shade_filetypes = {"none"},
       shade_terminals = true,

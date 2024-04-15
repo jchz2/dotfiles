@@ -38,7 +38,6 @@ return {
   end
 }
 
-
 -- return {
 --   "catppuccin/nvim",
 --   name = "catppuccin",
@@ -54,5 +53,14 @@ return {
 --   priority = 1000,
 --   config = function ()
 --     vim.cmd.colorscheme "moonlight"
+--   end
+-- }
+
+-- return {
+--   "morhetz/gruvbox",
+--   name = "gruvbox",
+--   priority = 1000 ,
+--   config = function ()
+--     vim.cmd.colorscheme "gruvbox"
 --   end
 -- }

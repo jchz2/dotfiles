@@ -21,8 +21,8 @@ return {
         icons = {
           glyphs = {
             folder = {
-              arrow_closed = " ", -- is closed
-              arrow_open = " ", -- is open
+              arrow_closed = "  ", -- is closed
+              arrow_open = "  ", -- is open
             },
           },
         },
@@ -42,4 +42,3 @@ return {
     keymap.set("n", "<C-n>", ":NvimTreeFindFileToggle<CR>")
   end
 }
-

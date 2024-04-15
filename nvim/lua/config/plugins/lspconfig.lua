@@ -100,6 +100,13 @@ return {
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
 
+    -- configure typescript server with plugin
+    lspconfig["markdown"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+
         vim.api.nvim_create_autocmd("BufWritePost", {
           pattern = { "*.js", "*.ts" },
           callback = function(ctx)
@@ -121,14 +128,14 @@ return {
     lspconfig["graphql"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact", "markdown" },
     })
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "markdown" },
     })
 
     -- configure python server
