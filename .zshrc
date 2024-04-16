@@ -1,10 +1,15 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # Brew
 export PATH=/opt/homebrew/bin:$PATH
 
 # Starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+# oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="nanotech"
+source $ZSH/oh-my-zsh.sh
 
 # Nvm
 export NVM_DIR="$HOME/.nvm"
@@ -16,15 +21,16 @@ export JAVA_HOME=/usr/bin/java
 
 # Neovim
 alias v=nvim
+alias obsidian="cd Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Obsidian/digitalBrain"
 
 # Alias bbva
-alias glomo="cells app:serve -c mx/web-dev.js"
-alias glomol="cells app:serve -c mx/local-dev.js"
+alias glob="cells app:serve -c mx/web-dev.js"
+alias loc="cells app:serve -c mx/local-dev.js"
 alias sweb="cells app:serve -c mx/local-dev.js"
 alias comp="cells component:serve"
-alias pctest="cells component:test"
+alias utest="cells component:test"
 alias lctest="cells lit-component:test"
-alias complit="cells lit-component:serve"
+alias clit="cells lit-component:serve"
 alias e2e="npm run test:e2e -- -c config/localExampleWeb.js"
 alias vulk="cells app:build -c mx/android-test.js -b novulcanize"
 alias vulkze="cells app:build -c mx/android-test.js -b vulcanize"
@@ -33,6 +39,7 @@ alias op="open ."
 alias cod="code ."
 alias litlint="cells lit-component:lint"
 alias bowlint="cells component:lint"
+alias cat="nyancat"
 
 # Alias git
 alias gch="git checkout"
@@ -40,13 +47,11 @@ alias gst="git status"
 alias gl="git log --oneline --decorate --all --graph"
 alias gcm="git commit"
 alias ga="git add"
-alias gpl="git pull origin"
+alias gpo="git pull origin"
 alias gpu="git push origin"
 
 alias js="curl cht.sh/js+"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Java
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -56,10 +61,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/bin/java
 
-# ChatGPT
-export OPENAI_API_KEY=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
-
-export PATH="$PATH:/Users/jczamora/.bin"
 
 #tmux
 function tat {
@@ -73,5 +74,16 @@ function tat {
    fi
  }
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export PATH="$PATH:/Users/jczamora/.bin"
+#
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+
+#vBank
+export PATH="$HOME/:$PATH"
