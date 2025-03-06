@@ -1,0 +1,11 @@
+#App shortcuts
+alt - b : open -a 'Arc'
+alt - t : open -a 'Ghostty'
+alt - o : open -a 'Obsidian'
+alt - a : open -a 'Android Studio'
+alt - w : open -a 'WhatsApp'
+alt - m : open -a 'Mail'
+alt - s : open -a 'Safari'
+alt - c : open -a 'Visual Studio Code'
+alt - u : open -a 'Music'
+alt - z : open -a 'Zen Browser'

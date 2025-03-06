@@ -1,0 +1,15 @@
+# theme = nordfox
+# font-family = CaskaydiaCove Nerd Font
+font-family = Fira Code 
+font-size = 13
+# background-opacity = 0.74
+# background-blur-radius = 22
+confirm-close-surface = false
+mouse-hide-while-typing = true
+macos-option-as-alt = true
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+auto-update = check
+gtk-titlebar = true
