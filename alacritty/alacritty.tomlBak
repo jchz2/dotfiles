@@ -1,0 +1,131 @@
+# # general.import = ["~/.config/alacritty/theme/nordic.toml"]
+# # import = ["~/.config/alacritty/themes/themes/tomorrow_night.toml"]
+# # import = ["~/.config/alacritty/themes/themes/horizon-dark.toml"]
+# general.import = ["~/.config/alacritty/themes/themes/kanagawa_wave.toml"]
+# # general.import = ["~/.config/alacritty/themes/themes/Rose-Pine.toml"]
+#
+# [terminal.shell]
+# program = "/bin/zsh" # O "/bin/bash" si ese es tu shell.
+# args = ["-l"]        # Carga el shell como un login shell para cargar todas las configuraciones.
+#
+# [env]
+# WINIT_X11_SCALE_FACTOR = "1.0"
+# TERM = "xterm-256color"
+#
+# [window]
+# dynamic_title = true
+# dimensions = { columns = 115, lines = 30 }
+# # option_as_alt = "OnlyRight"
+# opacity = 0.80
+# blur = true
+# padding = { x = 8, y = 12 }
+# # decorations = "None"
+# # decorations = "Transparent"
+# # decorations = "Buttonless"
+# class = { instance="Alacritty", general="Alacritty" }
+# resize_increments = true
+# position = "None"
+# decorations_theme_variant = "Dark"
+#
+# [font]
+# builtin_box_drawing = true
+# # normal = { family = "SF Mono", style = "Regular" }
+# normal = { family = "SauceCodePro Nerd Font", style = "Italic" }
+# size = 13
+#
+# [cursor]
+# style = { shape = "Beam", blinking = "Always" }
+# blink_interval = 450
+#
+# [mouse]
+# hide_when_typing = true
+#
+# [selection]
+# save_to_clipboard = true
+#
+# [keyboard]
+# bindings = [
+# { key = "Z", mods = "Command", action = "ToggleSimpleFullscreen" },
+# { key = "Right", mods = "Alt", chars = "\u001BF" },
+# { key = "Left",  mods = "Alt", chars = "\u001BB" },
+# ]
+
+# ==================== FUENTE ====================
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "Italic" }
+bold = { family = "SauceCodePro Nerd Font", style = "Bold" }
+italic = { family = "SauceCodePro Nerd Font", style = "Italic" }
+size = 13.0 # Ajusta el tamaño de la fuente a tu gusto
+
+# ==================== VENTANA ====================
+[window]
+padding = { x = 15, y = 15 } # Un padding generoso para un aspecto aireado
+decorations = "none"        # ¡Ultra minimalista! Elimina la barra de título y los botones
+dynamic_title = true        # Permite que el shell cambie el "título" de la ventana (se verá en el dock y con Cmd+Tab)
+opacity = 0.7 # Un buen punto de partida para la transparencia (0.0 = totalmente transparente, 1.0 = opaco)
+blur = true
+dimensions = { columns = 115, lines = 30 }
+
+# ==================== COLORES (Tema Kanagawa Wave) ====================
+# Este es un tema de colores oscuro, inspirado en la estética japonesa, con tonos fríos y relajantes.
+[colors.primary]
+background = "#1F1F28" # dragongreen
+foreground = "#DCD7BA" # sumiink0
+
+[colors.cursor]
+text = "#1F1F28"   # dragongreen
+cursor = "#6A9589" # sumiink5
+
+[colors.selection]
+text = "#DCD7BA" # sumiink0
+background = "#2F2F3B" # dragongreen
+
+[colors.normal]
+black   = "#1F1F28" # dragongreen
+red     = "#C34043" # springred
+green   = "#76946A" # springgreen
+yellow  = "#C0A36E" # springyellow
+blue    = "#7E9CDA" # springblue
+magenta = "#957FB8" # springviolet
+cyan    = "#6A9589" # sumiink5
+white   = "#DCD7BA" # sumiink0
+
+[colors.bright]
+black   = "#444B5B" # sumiink1
+red     = "#D2545D" # springred
+green   = "#8CBF7F" # springgreen
+yellow  = "#DFAF8F" # springyellow
+blue    = "#92B8F4" # springblue
+magenta = "#B39DF5" # springviolet
+cyan    = "#7FD9B5" # sumiink5
+white   = "#DCD7BA" # sumiink0
+
+# ==================== SHELL ====================
+# Define el shell predeterminado. Zsh es lo común en macOS.
+[terminal.shell]
+program = "/bin/zsh" # Cambia a "/bin/bash" o "/opt/homebrew/bin/fish" si usas otro
+args = ["-l"]        # Carga el shell como un login shell para todas tus configuraciones (ej. .zshrc)
+
+# ==================== COMPORTAMIENTO DEL TERMINAL ====================
+[terminal]
+osc52 = "CopyPaste" # Habilita la integración OSC 52 para copiar/pegar entre SSH y local
+
+# ==================== TECLADO ====================
+# Atajos esenciales de macOS (Cmd+C, Cmd+V).
+[keyboard]
+bindings = [
+  { key = "C", mods = "Command", action = "Copy" },
+  { key = "V", mods = "Command", action = "Paste" },
+  # Opcional: Atajo para abrir una nueva ventana de Alacritty
+  { key = "N", mods = "Command", action = "CreateNewWindow" },
+]
+
+# ==================== SCROLLBACK (Historial) ====================
+[scrolling]
+history = 10000 # Un historial amplio para revisar comandos.
+
+# ==================== CURSOR ====================
+[cursor]
+# style = { shape = "Beam", blinking = "Always" }
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 500 # Velocidad de parpadeo

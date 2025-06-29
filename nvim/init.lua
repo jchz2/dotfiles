@@ -19,5 +19,36 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = "plugins" },
+  { import = "plugins" }
 })
+
+require("tiny-inline-diagnostic").setup({
+  -- ...
+  signs = {
+    left = "",
+    right = "",
+    diag = "●",
+    arrow = "    ",
+    up_arrow = "    ",
+    vertical = " │",
+    vertical_end = " └",
+  },
+  blend = {
+    factor = 0.22,
+  },
+  -- ...
+})
+
+vim.o.laststatus = 2 -- Siempre mostrar statusline
+
+vim.o.statusline = table.concat({
+  "%f",          -- Nombre del archivo
+  " %y",         -- Tipo de archivo
+  " %m",         -- Modificado [+]
+  " %r",         -- Solo lectura [RO]
+  " [%{&ff}]",   -- Formato de archivo
+  "%=",          -- Alinear a la derecha
+  "%c:%l/%L"     -- Columna actual: línea actual / total líneas
+})
+
+

@@ -24,12 +24,39 @@ return {
       sections = {
         lualine_a = {
           {
-            "mode",
-            right_padding = 2,
-            icon = "",
+            function()
+              return "  " -- o "" si quieres que esté totalmente vacío
+            end,
+            padding = { left = 1, right = 1 },
+            color = function()
+              -- Usar los mismos colores que lualine por modo
+              local mode_color = {
+                n = "#6580A8", -- Normal
+                i = "#61afef", -- Insert
+                v = "#AE8FAB", -- Visual
+                [""] = "#98BBBA", -- Visual block
+                V = "#98BBBA", -- Visual line
+                c = "#B2666C", -- Command
+                no = "#56b6c2",
+                s = "#56b6c2",
+                S = "#56b6c2",
+                [""] = "#56b6c2",
+                ic = "#61afef",
+                R = "#e5c07b",
+                Rv = "#e5c07b",
+                cv = "#e06c75",
+                ce = "#e06c75",
+                r = "#56b6c2",
+                rm = "#56b6c2",
+                ["r?"] = "#56b6c2",
+                ["!"] = "#e06c75",
+                t = "#61afef",
+              }
+              local mode = vim.fn.mode()
+              return { fg = "#1e222a", bg = mode_color[mode] or "#abb2bf", gui = "bold" }
+            end,
           },
         },
-        lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = { "buffers" },
         lualine_x = {
           {
@@ -54,7 +81,6 @@ return {
       winbar = {},
       inactive_winbar = {},
       extensions = {},
-
     })
-  end
+  end,
 }

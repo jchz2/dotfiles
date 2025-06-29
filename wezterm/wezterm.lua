@@ -1,15 +1,16 @@
 local wezterm = require("wezterm")
 
 return {
-	color_scheme = 'Urple',
+	color_scheme = 'kanagawabones',
+	-- color_scheme = 'rose-pine',
   -- color_scheme = 'iceberg-dark',
 
 
 	window_decorations = "RESIZE", --"RESIZE, TITLE or INTEGRATED_BUTTONS|RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	-- window_background_image = '/Users/jczamora/wallpapers/nord/montanas-minimalista-arte-low-poly_3840x2160_xtrafondos.com.jpg',
-	-- font = wezterm.font("SauceCodePro Nerd Font Propo", { italic = true, bold = false, ligatures = true }),
-	font = wezterm.font("FiraCode Nerd Font", { italic = true, bold = false }),
+	font = wezterm.font("SauceCodePro Nerd Font Propo", { italic = true, bold = false, ligatures = true }),
+	-- font = wezterm.font("FiraCode Nerd Font", { italic = true, bold = false }),
 	font_size = 13,
 	window_frame = {
 	font_size = 16,
@@ -17,8 +18,9 @@ return {
 	enable_tab_bar = false,
 	tab_bar_at_bottom = true,
 	hide_tab_bar_if_only_one_tab = true,
-	-- window_background_opacity = 0.70,
-	macos_window_background_blur = 69,
+  window_border = false,
+	window_background_opacity = 0.80,
+	macos_window_background_blur = 64,
 	text_background_opacity = 1,
 	default_cursor_style = "BlinkingBar", -- SteadyBar, BlinkingBar, BlinkingUnderline, Block, Underline, Beam 
 	freetype_load_flags = "NO_HINTING|MONOCHROME",
